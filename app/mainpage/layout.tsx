@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex h-screen flex-col md:overflow-hidden bg-custom">
+    <div className="flex h-screen flex-col md:overflow-hidden">
       <div className="w-full flex-none">
         <SideNav />
       </div>

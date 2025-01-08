@@ -3,8 +3,9 @@
 import './ui/global.css';
 import { geistSans, geistMono } from './ui/fonts';
 import classNames from 'classnames';
-import { useState} from 'react';
+import { useState } from 'react';
 import Head from 'next/head';
+import { AntdRegistry } from '@ant-design/nextjs-registry';
 /*
 export const metadata: Metadata = {
   title: "tommy's website",
@@ -52,7 +53,7 @@ export default function RootLayout({
         )}
         onClick={handleClick}
       >
-        {children}
+        <AntdRegistry>{children}</AntdRegistry>
       </body>
     </html>
   );

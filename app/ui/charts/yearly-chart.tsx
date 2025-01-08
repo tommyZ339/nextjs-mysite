@@ -12,7 +12,7 @@ function contentMake(content: string) {
   );
 }
 
-export async function WeeklyChart() {
+export async function YearlyChart() {
   const getWeekNumber = (date: Date) => {
     const startOfYear = new Date(date.getFullYear(), 0, 1);
     const pastDaysOfYear = (date.getTime() - startOfYear.getTime()) / 86400000;
@@ -20,6 +20,7 @@ export async function WeeklyChart() {
   };
 
   const currentWeekNumber = getWeekNumber(new Date());
+  const currentYear = new Date().getFullYear();
   const data = [
     {
       title: 'Good luck, babe',
@@ -42,22 +43,21 @@ export async function WeeklyChart() {
       content: 'grower!',
     },
     {
-        title: 'Savage',
-        singer: 'Megan Thee Stallion',
-        content: 'This is a song about being a savage...',
+      title: 'Savage',
+      singer: 'Megan Thee Stallion',
+      content: 'This is a song about being a savage...',
     },
     {
-        title: 'Kiss me more',
-        singer: 'Doja Cat',
-        content: 'This is a song about kissing...',
+      title: 'Kiss me more',
+      singer: 'Doja Cat',
+      content: 'This is a song about kissing...',
     },
-
   ]; // future database substitute
 
   return (
-    <div className="flex w-full flex-col md: ml-40 md: col-span-6">
+    <div className="flex w-full flex-col col-span-3 md: ml-40 md: col-span-6">
       <h2 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
-        第{currentWeekNumber}周榜单
+        {currentYear}年截至第{currentWeekNumber}周，我的实时年榜...
       </h2>
       <div className="flex grow flex-col justify-between rounded-xl bg-pink p-2">
         {

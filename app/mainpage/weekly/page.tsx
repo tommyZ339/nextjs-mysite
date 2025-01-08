@@ -1,4 +1,4 @@
-import { WeeklyChart } from '../../ui/weekly/weekly-chart';
+import { WeeklyChart } from '../../ui/charts/weekly-chart';
 import { Suspense } from 'react';
 import { RevenueChartSkeleton } from '../../ui/skeletons';
 import React from 'react';
